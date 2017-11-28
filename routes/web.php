@@ -49,12 +49,12 @@ Route::get('/test', function () {
         'content'=>'updated content',
     ]);
     */
-
+/*
     $post= \App\Post::find(1);
     $post->title= 'saved title';
     $post->content= 'saved content';
     $post->save();
-
+*/
     /*
     $post= \App\Post::find(1);
     $post->delete();
@@ -77,4 +77,8 @@ Route::get('/test', function () {
     $lastPost = \App\Post::orderBy('id','DESC') ->first();
     dd($lastPost);
     */
+    $comment = new \App\Comment();
+    $comment -> title = 'test title';
+    $comment -> content ='test content';
+    $comment -> save();
     });
